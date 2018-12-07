@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_training_tree" model="ir.ui.view">
+            <field name="name">training.tree</field>
+            <field name="model">training</field>
+            <field name="arch" type="xml">
+                <tree string="列表">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_training" model="ir.actions.act_window">
+            <field name="name">培训</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">training</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_training_tree"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <menuitem id="training_menu_root" name="培训管理" sequence="0"/>
+        <menuitem id="training_menu" parent="training_menu_root" action="action_training" sequence="10"/>
+
+
+    </data>
+</odoo>
