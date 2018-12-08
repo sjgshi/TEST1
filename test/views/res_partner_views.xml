@@ -11,15 +11,7 @@
             <field name="domain">[]</field>
             <field name="context"></field>
         </record>
-        <record id="action_training1_partner" model="sp.actions.act_window">
-            <field name="name">商品</field>
-            <field name="type"> .actions.act_window</field>
-            <field name="res_model">res.partner</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">kanban,tree,form</field>
-            <field name="domain">[]</field>
-            <field name="context"></field>
-        </record>
+       
         
         <menuitem id="partner_menu_root" name="客户管理" sequence="0"/>
         <menuitem id="partner_menu" parent="partner_menu_root" action="action_training_partner" sequence="10"/>
